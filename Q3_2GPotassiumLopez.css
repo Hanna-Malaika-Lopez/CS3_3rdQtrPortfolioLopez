@@ -28,8 +28,8 @@ h1{
 }
 form{
     line-height:2rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 input, #gradeLvl, #clubOp, #reset, #submit, textarea{
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
