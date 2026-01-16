@@ -1,0 +1,36 @@
+@font-face{
+    font-family: "funkyHeading";
+    src: url('assets/FunkySign.otf');
+}
+*{
+    box-sizing:border-box;
+    color:#f8d3c5;
+    font-family: "funkyHeading";
+    text-shadow: 2px 2px #000000;
+    overflow:hidden;
+}
+body{
+    background-image: url('assets/formBg.png');
+}
+h1{
+    margin-top:2vh;
+    text-align:center;
+    font-size: 5rem;
+}
+.content{
+    max-width: 960px;
+    margin: auto;
+}
+.questions{
+        margin-top: -10vh;
+        background-color:#ffffff73;
+        border-radius: 10px;
+        padding: 1rem;
+}
+form{
+    line-height:2rem;
+    font-size: 1.5rem;
+}
+input, #gradeLvl, #clubOp, #reset, #submit, textarea{
+    font-size: 1.5rem;
+}

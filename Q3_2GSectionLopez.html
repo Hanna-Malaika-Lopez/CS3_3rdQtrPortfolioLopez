@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Hannah Lopez">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/jesterfavicon.png">
+    <link rel="stylesheet" href="Q3_2GSectionLopez.css">
+    <title>Q3_2GSectionLopez</title>
+</head>
+<body>
+<div class="content">
+    <h1>CLUB APPLICATION</h1>
+<div class="questions">
+<form method="post" action="submit.html" onsubmit="submitted()" onreset="resetted()">
+    <label for="studentID">Student ID:</label>
+    <input type="number" id="studentID">
+    <br>
+    <label for="fName">Full Name:</label>
+    <input type="text" id="fName">
+    <br>
+    <label for="bDay">Birthday:</label>
+    <input type="date" id="bDay">
+    <br>
+    <label for="email">Email Address:</label>
+    <input type="email" id="email">
+    <br>
+    <label for="cPNum">Mobile Number:</label>
+    <input type="text" id="cPNum">
+    <br>
+    <label for="gradeLvl">Grade Level:</label>
+    <select id="gradeLvl">
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>
+    <br>
+    <label>Intern or Extern:</label>
+    <input type="radio" id="intern" value="Intern">
+    <label for="intern">Intern</label>
+    <input type="radio" id="extern" value="extern">
+    <label for="extern">Extern</label>
+    <br>
+    <label for="clubOp">Preferred Organization/Club:</label>
+    <select id="clubOp">
+        <option value="consequat">Consequat</option>
+        <option value="scaena">Scaena</option>
+        <option value="litterae">Litterae</option>
+        <option value="sollertia">Sollertia</option>
+        <option value="cognitio">Cognitio</option>
+    </select>
+    <br>
+    <label for="reason">Why do you want to join the selected club?</label>
+    <br>
+    <textarea id="reason" rows="6" cols="70" name="reason"></textarea>
+    </select>
+    <br>
+    <input type="submit">
+    <input type="reset">
+</form>
+</div>
+</div>
+<script>
+    function submitted(){
+        confirm("Are you sure you want to submit?");
+    }
+    function resetted(){
+        confirm("Are you sure you want to reset? (Resetting removes all inputed data)");
+    }
+</script>
+</body>
+</html>
