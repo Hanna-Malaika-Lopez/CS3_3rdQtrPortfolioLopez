@@ -7,7 +7,7 @@
     color:#f8d3c5;
     font-family: "funkyHeading";
     text-shadow: 2px 2px #000000;
-    overflow:hidden;
+    /*overflow:hidden;*/
 }
 body{
     background-image: url('assets/formBg.png');
@@ -27,9 +27,12 @@ h1{
         padding: 1rem;
 }
 form{
-    line-height:2rem;
+    line-height:2.5rem;
     font-size: 2rem;
 }
 input, #gradeLvl, #clubOp, #reset, #submit, textarea{
     font-size: 2rem;
+}
+textarea{
+    width:100%;
 }
