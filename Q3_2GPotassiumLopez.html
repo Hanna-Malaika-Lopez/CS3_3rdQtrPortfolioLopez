@@ -12,24 +12,25 @@
 <div class="content">
     <h1>CLUB APPLICATION</h1>
 <div class="questions">
-<form method="post" action="submit.html" onsubmit="submitted()" onreset="resetted()">
-    <label for="studentID">Student ID:</label>
-    <input type="number" id="studentID">
+<form action="submit" method="post" onsubmit="submitted()" onreset="resetted()">
+    <label for="studentID" >Student ID:</label>
+    <input type="number" id="studentID" onblur="newfxA()">
     <br>
     <label for="fName">Full Name:</label>
-    <input type="text" id="fName">
+    <input type="text" id="fName" onblur="newfxB()">
     <br>
     <label for="bDay">Birthday:</label>
-    <input type="date" id="bDay">
+    <input type="date" id="bDay"onblur="newfxC()">
     <br>
     <label for="email">Email Address:</label>
-    <input type="email" id="email">
+    <input type="email" id="email" onblur="newfxD()">
     <br>
     <label for="cPNum">Mobile Number:</label>
-    <input type="text" id="cPNum">
+    <input type="text" id="cPNum" onblur="newfxE()">
     <br>
     <label for="gradeLvl">Grade Level:</label>
-    <select id="gradeLvl">
+    <select id="gradeLvl" onblur="newfxF()">
+        <option value="select">Select</option>
         <option value="7">7</option>
         <option value="8">8</option>
         <option value="9">9</option>
@@ -39,13 +40,14 @@
     </select>
     <br>
     <label>Intern or Extern:</label>
-    <input type="radio" id="intern" value="Intern">
-    <label for="intern">Intern</label>
-    <input type="radio" id="extern" value="extern">
-    <label for="extern">Extern</label>
+    <input type="radio" name="status"id="intern" value="Intern" onblur="newfxG()">
+    <label for="intern" id="interns" >Intern</label>
+    <input type="radio" name="status" id="extern" value="extern" onblur="newfxH()">
+    <label for="extern" id="externs" >Extern</label>
     <br>
     <label for="clubOp">Preferred Organization/Club:</label>
-    <select id="clubOp">
+    <select id="clubOp" onblur="newfxI()">
+        <option value="select">Select</option>
         <option value="consequat">Consequat</option>
         <option value="scaena">Scaena</option>
         <option value="litterae">Litterae</option>
@@ -55,11 +57,11 @@
     <br>
     <label for="reason">Why do you want to join the selected club?</label>
     <br>
-    <textarea id="reason" rows="6" cols="70" name="reason"></textarea>
+    <textarea id="reason" rows="6" cols="70" name="reason" onblur="newfxJ()"></textarea>
     </select>
     <br>
     <input type="submit">
-    <input type="reset">
+    <input type="reset" id="reset">
 </form>
 </div>
 </div>
@@ -69,6 +71,52 @@
     }
     function resetted(){
         confirm("Are you sure you want to reset? (Resetting removes all inputed data)");
+    }
+    function newfxA(){
+    let a = document.getElementById("studentID");
+    a.style.color="#CB7A5C";
+    }
+    function newfxB(){
+    let b = document.getElementById("fName");
+    b.style.color="#CB7A5C";
+    }
+    function newfxC(){
+    let c = document.getElementById("bDay");
+    if(!c.value){
+    c.style.color="#f8d3c5";
+    }else if(c.value){
+    c.style.color="#CB7A5C";
+    }
+    }
+    function newfxD(){
+    let d = document.getElementById('email');
+    d.style.color="#CB7A5C";
+    }
+    function newfxE(){
+    let e= document.getElementById('cPNum');
+    e.style.color="#CB7A5C";
+    }
+    function newfxF(){
+    let f = document.getElementById('gradeLvl');
+    let base="select";
+    if(base!==f.value){
+        f.style.color="#CB7A5C";
+    }else{
+        f.style.color="#f8d3c5";
+    }
+    }
+    function newfxI(){
+    let i= document.getElementById('clubOp');
+    let base="select";
+    if(base!==i.value){
+        i.style.color="#CB7A5C";
+    }else{
+        i.style.color="#f8d3c5";
+    }
+    }
+    function newfxJ(){
+    let j = document.getElementById('reason');
+    j.style.color="#CB7A5C";
     }
 </script>
 </body>

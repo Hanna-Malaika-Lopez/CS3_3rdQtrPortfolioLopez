@@ -36,3 +36,9 @@ input, #gradeLvl, #clubOp, #reset, #submit, textarea{
 textarea{
     width:100%;
 }
+input:focus{
+    background-color: #d49e91c7;
+}
+input:checked + label{
+    color: #CB7A5C;
+}
