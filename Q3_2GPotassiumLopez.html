@@ -10,27 +10,33 @@
 </head>
 <body>
 <div class="content">
+    <div class="toOtherPage">
+        <h1>&lt;</h1>
+        <a href="viewSignUps.html" id="link">Go to List of SignUps</a>
+    </div>
+    <div class="head">
     <h1>CLUB APPLICATION</h1>
+    </div>
 <div class="questions">
-<form action="submit" method="post" onsubmit="submitted()" onreset="resetted()">
-    <label for="studentID" >Student ID:</label>
-    <input type="number" id="studentID" onblur="newfxA()">
+<form onsubmit="submitted(event)"id="mainForm">
+    <label for="studentID">Student ID:</label>
+    <input type="number" id="studentID"onblur="newfxA()" required>
     <br>
     <label for="fName">Full Name:</label>
-    <input type="text" id="fName" onblur="newfxB()">
+    <input type="text" id="fName" onblur="newfxB()" required>
     <br>
     <label for="bDay">Birthday:</label>
-    <input type="date" id="bDay"onblur="newfxC()">
+    <input type="date" id="bDay"onblur="newfxC()" required>
     <br>
     <label for="email">Email Address:</label>
-    <input type="email" id="email" onblur="newfxD()">
+    <input type="email" id="email" onblur="newfxD()" required>
     <br>
-    <label for="cPNum">Mobile Number:</label>
-    <input type="text" id="cPNum" onblur="newfxE()">
+    <label for="cPNum">Contact Number:</label>
+    <input type="tel" id="cPNum"  pattern="[0-9]{11}" placeholder="09---------" onblur="newfxE()" required>
     <br>
     <label for="gradeLvl">Grade Level:</label>
     <select id="gradeLvl" onblur="newfxF()">
-        <option value="select">Select</option>
+        <option value="select" required>Select</option>
         <option value="7">7</option>
         <option value="8">8</option>
         <option value="9">9</option>
@@ -40,84 +46,31 @@
     </select>
     <br>
     <label>Intern or Extern:</label>
-    <input type="radio" name="status"id="intern" value="Intern" onblur="newfxG()">
-    <label for="intern" id="interns" >Intern</label>
-    <input type="radio" name="status" id="extern" value="extern" onblur="newfxH()">
+    <input type="radio" name="status" id="intern" value="Intern" required>
+    <label for="intern" id="interns">Intern</label>
+    <input type="radio" name="status" id="extern" value="Extern" required>
     <label for="extern" id="externs" >Extern</label>
     <br>
     <label for="clubOp">Preferred Organization/Club:</label>
-    <select id="clubOp" onblur="newfxI()">
-        <option value="select">Select</option>
-        <option value="consequat">Consequat</option>
-        <option value="scaena">Scaena</option>
-        <option value="litterae">Litterae</option>
-        <option value="sollertia">Sollertia</option>
-        <option value="cognitio">Cognitio</option>
+    <select id="clubOp" onblur="newfxG()" required>
+        <option value="Select">Select</option>
+        <option value="Consequat">Consequat</option>
+        <option value="Scaena">Scaena</option>
+        <option value="Litterae">Litterae</option>
+        <option value="Sollertia">Sollertia</option>
+        <option value="Cognitio">Cognitio</option>
     </select>
     <br>
-    <label for="reason">Why do you want to join the selected club?</label>
+    <label for="reason" >Why do you want to join the selected club?</label>
     <br>
-    <textarea id="reason" rows="6" cols="70" name="reason" onblur="newfxJ()"></textarea>
-    </select>
+    <textarea id="reason" rows="6" cols="70"onblur="newfxH()" required></textarea>
     <br>
     <input type="submit">
-    <input type="reset" id="reset">
+    <input type="reset" id="resetting" onclick="resetted(event)">
 </form>
 </div>
 </div>
-<script>
-    function submitted(){
-        confirm("Are you sure you want to submit?");
-    }
-    function resetted(){
-        confirm("Are you sure you want to reset? (Resetting removes all inputed data)");
-    }
-    function newfxA(){
-    let a = document.getElementById("studentID");
-    a.style.color="#CB7A5C";
-    }
-    function newfxB(){
-    let b = document.getElementById("fName");
-    b.style.color="#CB7A5C";
-    }
-    function newfxC(){
-    let c = document.getElementById("bDay");
-    if(!c.value){
-    c.style.color="#f8d3c5";
-    }else if(c.value){
-    c.style.color="#CB7A5C";
-    }
-    }
-    function newfxD(){
-    let d = document.getElementById('email');
-    d.style.color="#CB7A5C";
-    }
-    function newfxE(){
-    let e= document.getElementById('cPNum');
-    e.style.color="#CB7A5C";
-    }
-    function newfxF(){
-    let f = document.getElementById('gradeLvl');
-    let base="select";
-    if(base!==f.value){
-        f.style.color="#CB7A5C";
-    }else{
-        f.style.color="#f8d3c5";
-    }
-    }
-    function newfxI(){
-    let i= document.getElementById('clubOp');
-    let base="select";
-    if(base!==i.value){
-        i.style.color="#CB7A5C";
-    }else{
-        i.style.color="#f8d3c5";
-    }
-    }
-    function newfxJ(){
-    let j = document.getElementById('reason');
-    j.style.color="#CB7A5C";
-    }
+<script src="Q3_2GPotassiumLopez.js">
 </script>
 </body>
 </html>

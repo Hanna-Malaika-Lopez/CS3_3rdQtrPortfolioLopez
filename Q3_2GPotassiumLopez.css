@@ -1,44 +1,113 @@
 @font-face{
-    font-family: "funkyHeading";
-    src: url('assets/FunkySign.otf');
+    src:url('assets/FunkySign.otf');
+    font-family: 'funky';
 }
 *{
     box-sizing:border-box;
-    color:#f8d3c5;
-    font-family: "funkyHeading";
-    text-shadow: 2px 2px #000000;
-    /*overflow:hidden;*/
 }
-body{
+body,html{
+    max-height:100vh;
+    max-width:100vw;
+    margin:0;
+    padding:0;
     background-image: url('assets/formBg.png');
 }
-h1{
-    margin-top:2vh;
-    text-align:center;
-    font-size: 5rem;
-}
 .content{
-    max-width: 960px;
-    margin: auto;
+    display:grid;
+    width: 100vw;
+    height:100vh;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    font-family: 'funky';
+    color:#f8d3c5;
+}
+.head{
+    grid-area: 1/2/2/2;
+    text-align:center;
+    font-size: 2rem;
+    text-shadow:3px 3px #CB7A5C;
 }
 .questions{
-        background-color:#ffffff73;
-        border-radius: 10px;
-        padding: 1rem;
+    grid-area: 2/2/3/3;
+    text-shadow:2px 2px #CB7A5C;
+    font-size:1.5rem;
+    margin-left:auto;
+    margin-right:auto;
 }
-form{
-    line-height:2.5rem;
-    font-size: 2rem;
+input, textarea, select, input::placeholder{
+    font-family:'funky';
+    font-size:1.5rem;
+    color:#eea286;
+    text-shadow:#f8d3c5;
 }
-input, #gradeLvl, #clubOp, #reset, #submit, textarea{
-    font-size: 2rem;
+input:checked+label{
+    color:#CB7A5C;
+    text-shadow:2px 2px #f8d3c5;
 }
-textarea{
+.toOtherPage{
+    grid-area:1/1/2/2;
+    height:50%;
+    width:80%;
+    border: 10px solid #a3b899;
+    border-radius:10px;
+    background-color:#f8d3c5;
+    margin: 1%;
+    text-align: right;
+}
+.toOtherPage a{
+    font-size:1.7rem;
+    text-decoration: none;
+    color:#CB7A5C;
     width:100%;
+    height:100%;
 }
-input:focus{
-    background-color: #d49e91c7;
+.toOtherPage h1{
+    float:left;
+    color:#CB7A5C;
+    font-size: 5rem;
+    margin-top:0;
+    padding:0;
+    line-height:0.8;
 }
-input:checked + label{
-    color: #CB7A5C;
+.tableMain{
+    grid-area: 2/1/3/4;
+    background-color:white;
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:2%;
+    max-width: 100%;
+    max-height:100%;
+    border:2px solid #CB7A5C;
+    border-bottom:3px solid #CB7A5C;
+    overflow:scroll;
+}
+table{
+    border-collapse:collapse;
+    border-bottom:3px solid #CB7A5C;
+}
+ th, .newData{
+    border:3px solid #CB7A5C;
+    margin:0;
+    width: 10%;
+}
+.newData{
+    text-shadow:1px 2px #CB7A5C;
+    font-size:1.25rem;
+}
+th{
+    font-size: 1.5rem;
+    padding:0;
+    color:#CB7A5C;
+    text-shadow:2px 2px#f8d3c5;
+}
+#noData{
+    text-align: center;
+    font-size:5rem;
+    border:none;
+}
+#club{
+    grid-area: 1/1/1/1;
+    margin-top:50%;
+    margin-left:10%;
+    border:3px solid #CB7A5C;
 }
