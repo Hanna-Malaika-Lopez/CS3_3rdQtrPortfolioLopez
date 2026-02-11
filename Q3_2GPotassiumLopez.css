@@ -46,7 +46,7 @@ input:checked+label{
 }
 .toOtherPage{
     grid-area:1/1/2/2;
-    height:50%;
+    height:45%;
     width:80%;
     border: 10px solid #a3b899;
     border-radius:10px;
@@ -55,7 +55,7 @@ input:checked+label{
     text-align: right;
 }
 .toOtherPage a{
-    font-size:1.7rem;
+    font-size:3rem;
     text-decoration: none;
     color:#CB7A5C;
     width:100%;
